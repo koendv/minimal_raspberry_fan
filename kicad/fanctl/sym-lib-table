@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name fan_ctrl)(type Legacy)(uri ${KIPRJMOD}/fan_ctrl.lib)(options "")(descr ""))
+)
