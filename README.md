@@ -7,7 +7,7 @@ This is a small fan speed controller for the Raspberry Pi. The [schematic](doc/s
 The fan used is 5V DC, brushless, 2 wire, **1W max**.
 
 # Hardware
-The github contains kicad project files. This is a link to the pcb as an orderable [shared project at oshpark](https://oshpark.com/shared_projects/uS7DB7dc), and these are the components as a [shared project at Mouser](https://www.mouser.com/ProjectManager/ProjectDetail.aspx?AccessID=1c164b36e2). The Bill of Materials is small:
+The github contains kicad project files and python script for raspbian. This is a link to the pcb as an orderable [shared project at oshpark](https://oshpark.com/shared_projects/uS7DB7dc), and these are the components as a [shared project at Mouser](https://www.mouser.com/ProjectManager/ProjectDetail.aspx?AccessID=1c164b36e2). The Bill of Materials is:
 
 Quant.|Item
 ---|--
@@ -16,7 +16,7 @@ Quant.|Item
 1|Molex 15-44-6806 female header, 2x03, 2.54mm pitch
 
 ## Installation
-If you scan the i2c bus, you ought to see the fan controller at address 0x74:
+The fan controller plugs into pin 1-6 of the Raspberry GPIO. If you scan the i2c bus, you ought to see the fan controller at address 0x74:
 ```
 koen@raspberrypi:~ $ sudo i2cdetect -r -y 1
      0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
