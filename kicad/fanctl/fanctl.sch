@@ -181,7 +181,7 @@ Wire Wire Line
 Wire Wire Line
 	7600 1900 7600 2000
 Text Notes 5800 3100 0    50   ~ 0
-J1 is Raspberry GPIO header, pins 1-6.\nJ2 is Fan, 5V DC, 40x40mm, 2 wire, brushless, 1W max. 
+J1 is Raspberry GPIO header, pins 1-6.\nJ2 is Fan, 5V DC, 2 wire, brushless, 1W max. 
 Text Label 7250 1800 0    50   ~ 0
 VFAN
 $Comp

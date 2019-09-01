@@ -71,8 +71,8 @@ variable|value|description
 fan_min|21|minimum fan speed. fan will stall below fan_min.
 fan_boost|25|fan_boost is the lowest speed where the fan will reliably begin to rotate. fan speeds below fan_boost need 0.25s at full voltage to get the fan moving first.
 fan_max|63|maximum fan speed. 63 corresponds to full +5V.
-temp_min|65|switch fan off below temp_min degrees
-temp_max|85|run fan at full speed at temp_max or above
+temp_min|60|switch fan off below temp_min degrees
+temp_max|80|run fan at full speed at temp_max or above
 
 The values for *fan_min* and *fan_boost* are for the fan I'm using. The values  *temp_min* and *temp_max* represent personal choices. Once you are happy with the values, you can add the fan controller to ```/etc/rc.local``` so the fan starts up at boot:
 ```
