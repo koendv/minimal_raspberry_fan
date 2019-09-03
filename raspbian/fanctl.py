@@ -17,7 +17,7 @@ import smbus
 ltc1695_bus = 1
 ltc1695_address = 0x74
 
-fan_min = 21   # min fan speed
+fan_min = 20   # min fan speed
 fan_boost = 25 # lowest speed where fan is guaranteed to start
 fan_max = 63   # max fan speed
 
@@ -105,6 +105,13 @@ def loop():
 
 # main
 
+if len(sys.argv) == 2 and sys.argv[1] == "-t":
+    # print temp
+    debug = True
+    get_cpu_temperature()
+    get_video_temperature()
+    exit()
+
 if os.geteuid() != 0:
     exit("Are you root?")
 
@@ -112,23 +119,23 @@ fan_running = False
 bus = smbus.SMBus(ltc1695_bus)
 
 if len(sys.argv) == 2 and sys.argv[1].isdigit():
+    # set fan speed
     speed = int(sys.argv[1])
     set_fan_speed(speed)
     get_fan()
     exit()
 elif len(sys.argv) == 2 and sys.argv[1] == "-d":
+    # switch on debugging
     debug = True
 elif len(sys.argv) != 1:
-    print("Usage: fanctrl [-d] [speed]")
+    print("Usage: fanctrl [-d] [-t] [speed]")
     print("where speed = 0 .. 63")
     exit()
-
 
 try:
     while True:
         loop()
-        sleep(57) # choose prime number in case some job starts up every minute
-#        sleep(13)
+        sleep(57) # choose largest prime number smaller than 60 in case some job starts up every minute
 except KeyboardInterrupt:
     fan_off()
 
