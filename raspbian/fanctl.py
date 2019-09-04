@@ -56,7 +56,7 @@ def get_fan():
 
 def set_fan(speed, boost):
     dta = int(speed)
-    if not dta in range(0, 63):
+    if not dta in range(0, 64):
         return()
     if boost:
         dta += 64;
