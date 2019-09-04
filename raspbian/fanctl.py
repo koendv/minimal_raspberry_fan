@@ -24,7 +24,7 @@ fan_max = 63   # max fan speed
 temp_min = 60  # min temperature
 temp_max = 80  # max temperature
 
-soft_start = True # soft or hard start
+soft_start = False # soft or hard start
 debug = False
 
 # get cpu and video temperature
