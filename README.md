@@ -3,11 +3,11 @@
 ![LTC1695 Fan Controller](doc/fanctl_front.jpg  "LTC1695 Fan Controller")
 
 
-This is a small fan speed controller for the Raspberry Pi. The [schematic](doc/schematic.pdf) is just one ic and two capacitors. 
-The fan used is 5V DC, brushless, 2 wire, **1W max**.
+This is a small fan speed controller for the Raspberry Pi. The [schematic](doc/schematic.pdf) is just one ic and two capacitors. The whole board is just 16.0 x 24.0 mm (0.63 x 0.95 inches).
 
 ## Hardware
 The github contains kicad project files and python script for raspbian. This is a link to the pcb as an orderable [shared project at oshpark](https://oshpark.com/shared_projects/uS7DB7dc), and these are the components as a [shared project at Mouser](https://www.mouser.com/ProjectManager/ProjectDetail.aspx?AccessID=1c164b36e2). 
+The fan used is 5V DC, brushless, 2 wire, **1W max**.
 
 ## Bill of Materials
 
