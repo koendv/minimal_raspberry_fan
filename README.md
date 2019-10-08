@@ -18,7 +18,7 @@ Quant.|Prod. No.|Description
 1|Molex 15-44-6806|female header, 2x03, 2.54mm pitch
 
 ## Installation
-The fan controller plugs into pin 1-6 of the Raspberry GPIO. If you scan the i2c bus, you ought to see the fan controller at address 0x74:
+The fan controller plugs into pin 1-6 of the Raspberry GPIO. Enable i2c bus 1 clicking on the raspberry icon -> Preferences -> Raspberry Pi Configuration -> Interfaces -> i2c. If you scan the i2c bus, you ought to see the fan controller at address 0x74:
 ```
 koen@raspberrypi:~ $ sudo i2cdetect -r -y 1
      0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
